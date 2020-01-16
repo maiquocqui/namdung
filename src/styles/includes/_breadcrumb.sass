@@ -1,0 +1,59 @@
+.breadcrumb-wrap
+	+pos(rel,null)
+	height: 250px
+	+flexbox
+	align-items: center
+	align-content: center
+	justify-content: center
+	flex-direction: column
+	+media-breakpoint-down(md)
+		height: 200px
+	+media-breakpoint-down(sm)
+		height: 120px
+	.breadcrumb-bg
+		+pos(abs,0 null 0 0)
+		right: 0
+		&:before
+			content: ''
+			display: block
+			+pos(abs, 0 null 0 0)
+			right: 0
+			background: color-rgba(darken($white,90%),0.5)
+	.page-name
+		@extend .title
+		@extend .fontP
+		+fs(36rem)
+		color: $white
+		font-weight: 600
+		text-transform: uppercase
+		+pos(rel,null)
+		z-index: 5
+		+media-breakpoint-down(md)
+			+fs(28rem)
+		+media-breakpoint-down(sm)
+			+fs(18rem)
+		&:after
+			background: url(../img/line2.png) center center no-repeat
+	.breadcrumb
+		color: $white
+		+pos(rel,null)
+		z-index: 5
+		margin: 0
+		padding: 0
+		background: none
+		li
+			+fs(14rem)
+			+media-breakpoint-down(sm)
+				+fs(13rem)
+			&:first-child
+				+fs(0)
+				&:before
+					content: '\f015'
+					+fs(14rem)
+					+media-breakpoint-down(sm)
+						+fs(13rem)
+			+ li
+				&:before
+					content: '/'
+					font-weight: bold
+					margin: 0px 10px

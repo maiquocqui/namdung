@@ -1,0 +1,217 @@
+.fullpage
+	padding-top: 130px
+	+media-breakpoint-down(lg)
+		padding-top: 50px
+header
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	&.active
+		box-shadow: 0px 10px 10px color-rgba($black,0.1)
+	.header-top
+		background: $blue
+		color: $white
+		+media-breakpoint-down(lg)
+			display: none
+	.header-wrap
+		+flexbox
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(lg)
+			justify-content: flex-start
+	.col-right
+		+flexbox
+		align-items: center
+		align-content: center
+	.slogan
+		@extend .fontP
+		+flexbox
+		align-items: center
+		align-content: center
+		height: 40px
+		text-transform: uppercase
+		+fs(14rem)
+	.phone
+		@extend .fontB
+		+flexbox
+		align-items: center
+		align-content: center
+		+fs(16rem)
+		&:before
+			content: ''
+			display: block
+			width: 25px
+			height: 25px
+			background: url(../img/hotline.png) center center no-repeat
+			margin-right: 10px
+		a
+			+fs(18rem)
+			font-weight: 600
+	.header-menu
+		background: $white
+	.btn-menu
+		display: none
+		+media-breakpoint-down(lg)
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			+fs(18rem)
+			width: 36px
+			height: 36px
+			+bor-rad(0px)
+			border: 1px solid darken($white,10%)
+			margin-right: 10px
+			+pos(rel,null)
+			z-index: 1001
+			&:before
+				content: '\f0c9'
+			&.active
+				background: $blue
+				color: $white
+				border-color: $blue
+	.logo
+		+flexbox
+		align-items: center
+		align-content: center
+		height: 90px
+		+media-breakpoint-down(lg)
+			height: 50px
+			img
+				height: 30px
+	.menu-block
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(lg)
+			+pos(fix, 50px null null 0)
+			display: block
+			background: $blue
+			padding: 15px
+			+transform(translateX(-100%))
+			+transition(all,0.5s)
+			&.open
+				+transform(translateX(0%))
+	.menu
+		margin-right: 60px
+		+media-breakpoint-down(lg)
+			margin-right: 0
+			min-width: 200px
+		ul.menu-link
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(lg)
+				display: block
+				margin-bottom: 15px
+			li
+				+flexbox
+				align-items: center
+				align-content: center
+				+media-breakpoint-down(lg)
+					display: block
+				+ li
+					+media-breakpoint-down(lg)
+						border-top: 1px dashed color-rgba($white,0.2)
+					&:before
+						content: ''
+						display: block
+						width: 1px
+						height: 10px
+						margin: 0px 5px
+						background: $main
+						opacity: 0.2
+						+media-breakpoint-down(lg)
+							display: none
+				a
+					display: block
+					@extend .fontB
+					+fs(16rem)
+					font-weight: 600
+					text-transform: uppercase
+					color: $main
+					padding: 5px 30px
+					.fa, .fas
+						display: none
+					+media-breakpoint-down(lg)
+						color: $white
+				&:first-child
+					+media-breakpoint-up(xl)
+						a
+							+fs(0)
+							&:before
+								content: '\f015'
+								+fs(18rem)
+								font-weight: normal
+				&.active
+					a
+						background: $red
+						color: $white
+	.search
+		// .search-toggle
+		// 	background: $blue
+		// 	+flexbox
+		// 	align-items: center
+		// 	align-content: center
+		// 	justify-content: center
+		// 	width: 26px
+		// 	height: 26px
+		// 	+bor-rad(100px)
+		// 	+pos(rel,null)
+		// 	z-index: 3
+		.searchbox
+			+pos(rel,null)
+			+bor-rad(100px)
+			padding: 1px
+			border: 1px solid darken($white,10%)
+			+media-breakpoint-down(lg)
+				border: none
+				background: $white
+				+flexbox
+				align-items: center
+				align-content: center
+				padding: 0 1px
+			input
+				+bor-rad(100px)
+				+fs(14rem)
+				width: 50px
+				min-width: 0px
+				padding: 7px 10px
+				line-height: 1
+				border: 1px solid darken($white,10%)
+				+pos(abs, -2px -2px null null)
+				+transition(all,0.3s)
+				opacity: 0
+				visibility: hidden
+				+media-breakpoint-down(lg)
+					border: none
+					opacity: 1
+					visibility: visible
+					flex: 1
+					+pos(static,null)
+			.searchbutton
+				background: $blue
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				width: 26px
+				height: 26px
+				+bor-rad(100px)
+				+pos(rel,null)
+				z-index: 3
+				cursor: pointer
+				+fs(0)
+				&:before
+					content: ''
+					display: block
+					width: 11px
+					height: 11px
+					background: url(../img/search.png) center center no-repeat
+			&:hover
+				input
+					width: 200px
+					opacity: 1
+					visibility: visible

@@ -1,0 +1,142 @@
+footer
+	.subscribe-wrap
+		background: #026ead
+		padding: 30px 0
+		.subscribe
+			.module-title
+				@extend .fontP
+				+fs(30rem)
+				text-transform: uppercase
+				color: $white
+				text-align: center
+				margin-bottom: 10px
+				+media-breakpoint-down(md)
+					+fs(20rem)
+				+media-breakpoint-down(sm)
+					+fs(16rem)
+			.subscribefrm
+				width: 100%
+				max-width: 570px
+				margin: 0 auto 10px
+				+flexbox
+				align-items: center
+				align-content: center
+				input
+					flex: 1
+					background: $white
+					border: none
+					@extend .fontB
+					+fs(18rem)
+					line-height: 48px
+					padding: 0px 15px
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+						line-height: 40px
+				.subscribebutton
+					@extend .button
+					@extend .fontB
+					+fs(24rem)
+					line-height: 48px
+					font-weight: 600
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+						line-height: 40px
+						padding: 0px 15px
+					&:after
+						content: "\e87a"
+						line-height: 1
+						font-family: Linearicons-Free
+						margin-left: 10px
+	.footer-main
+		color: $white
+		background: #054971 url(../img/ftbg.png) center top no-repeat
+	.footer-top
+		padding: 30px 0
+		border-bottom: 1px solid color-rgba($white,0.2)
+		.footer-title
+			@extend .fontP
+			+fs(18rem)
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 15px
+			+media-breakpoint-down(sm)
+				+fs(16rem)
+			&:after
+				content: ''
+				display: block
+				width: 120px
+				height: 1px
+				background: $white
+				opacity: 0.2
+				margin-top: 5px
+		.contact-info
+			+media-breakpoint-down(md)
+				margin-bottom: 30px
+			ul
+				li
+					+flexbox
+					align-items: center
+					align-content: center
+					margin-bottom: 10px
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+					&:before
+						content: ''
+						display: block
+						width: 35px
+						height: 35px
+						margin-right: 10px
+					&.address
+						&:before
+							background: url(../img/location.png) center center no-repeat
+					&.phone
+						&:before
+							background: url(../img/phone.png) center center no-repeat
+					&.email
+						&:before
+							background: url(../img/email.png) center center no-repeat
+					span
+						+media-breakpoint-down(sm)
+							width: calc(100% - 45px)
+		.footer-link
+			@extend .fontB
+			+media-breakpoint-down(sm)
+				margin-bottom: 30px
+			ul
+				li
+					+pos(rel,null)
+					padding-left: 20px
+					&:before
+						content: ''
+						display: block
+						width: 8px
+						height: 8px
+						+bor-rad(100%)
+						background: $white
+						+pos(abs, 13px null null 0)
+					a
+						display: block
+						+fs(16rem)
+						padding: 5px 0
+		.social
+			a
+				+fs(32rem)
+				+ a
+					margin-left: 30px
+	.footer-bottom
+		padding: 20px 0
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		+media-breakpoint-down(sm)
+			flex-direction: column
+		.copyright
+			@extend .fontB
+			+fs(16rem)
+			+media-breakpoint-down(sm)
+				+fs(13rem)
+		.bct
+			+media-breakpoint-down(sm)
+				img
+					width: 120px
