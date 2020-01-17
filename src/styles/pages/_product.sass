@@ -53,6 +53,17 @@
 					content: "\e87a"
 					font-family: Linearicons-Free
 					margin-left: 10px
+					+transition(all,0.3s)
+		&:hover
+			.img
+				img
+					+transform(scale3d(1.1,1.1,1))
+			.caption
+				.name
+					color: $blue
+				.viewdetail
+					&::after
+						margin-left: 20px
 
 .product-page
 	@extend .content-page

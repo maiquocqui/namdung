@@ -135,6 +135,7 @@
 				font-weight: 800
 				color: #e9f0f2
 				+pos(rel,null)
+				+transition(all,0.3s)
 				&:before
 					content: ''
 					display: block
@@ -162,6 +163,9 @@
 					margin: 0 auto
 					+media-breakpoint-down(sm)
 						+fs(14rem)
+			&:hover
+				.number
+					color: #d9edf3
 
 .home-product
 	@extend .home-section
@@ -211,8 +215,13 @@
 			height: 80px
 			border: 1px solid darken($white,20%)
 			img
-				max-width: 90%
-				max-height: 90%
+				max-width: 80%
+				max-height: 80%
+				+transition(all,0.3s)
+			&:hover
+				border-color: $blue
+				img
+					+transform(scale3d(1.1,1.1,1))
 
 .home-service
 	padding: 40px 0
@@ -263,3 +272,11 @@
 						content: "\e87a"
 						font-family: Linearicons-Free
 						margin-left: 10px
+						+transition(all,0.3s)
+			&:hover
+				.caption
+					.name
+						color: $blue
+					.viewdetail
+						&:after 
+							margin-left: 20px
