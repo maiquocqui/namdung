@@ -8,6 +8,15 @@
 	// 	margin-bottom: 5px
 	.form-group
 		margin-bottom: 10px
+		+pos(rel,null)
+		.fa-exclamation-triangle
+			color: $red
+			+pos(abs,6px 10px null null)
+			+fs(0)
+			&:before
+				content: '\f071'
+				+fs(16rem)
+				color: red
 	label
 		display: block
 		+fs(13rem)

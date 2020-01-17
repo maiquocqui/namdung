@@ -106,10 +106,11 @@ header
 			+media-breakpoint-down(lg)
 				display: block
 				margin-bottom: 15px
-			li
+			>li
 				+flexbox
 				align-items: center
 				align-content: center
+				+pos(rel,null)
 				+media-breakpoint-down(lg)
 					display: block
 				+ li
@@ -125,7 +126,7 @@ header
 						opacity: 0.2
 						+media-breakpoint-down(lg)
 							display: none
-				a
+				>a
 					display: block
 					@extend .fontB
 					+fs(16rem)
@@ -145,11 +146,35 @@ header
 								content: '\f015'
 								+fs(18rem)
 								font-weight: normal
+				.sub
+					display: block
+					+pos(abs, 100% null null 15px)
+					background: color-rgba($blue,0.9)
+					padding: 10px 15px
+					min-width: 200px
+					visibility: hidden
+					opacity: 0
+					ul
+						li
+							+ li
+								border-top: 1px dashed color-rgba($white,0.2)
+							a
+								display: block
+								color: $white
+								padding: 10px
+								&:hover
+									color: $red
+									font-weight: 600
 				&:hover
-					a
+					>a
 						color: $red
+					+media-breakpoint-up(xl)
+						.sub
+							+transition(all,0.3s)
+							visibility: visible
+							opacity: 1
 				&.active
-					a
+					>a
 						background: $red
 						color: $white
 	.search
