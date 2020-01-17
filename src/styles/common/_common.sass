@@ -29,32 +29,16 @@
 	position: relative
 	.fa-exclamation-triangle
 		color: red
-		+fs(15rem)
+		+fs(0rem)
 		display: block
 		position: absolute
-		top: 10px
-		right: 10px
-		text-indent: -9999px
-		width: 15px
-		height: 15px
-		line-height: 15px
+		top: 18px
+		left: 10px
 		text-align: center
-		&:after
+		&:before
 			content: '\f071'
-			font-size: 12px
-			color: red
-			text-indent: 0
-			float: left
-			position: absolute
-			top: 0
-			bottom: 0
-			right: 0
-			left: 0
-		@media only screen and (min-width: 1024px)
-			right: 15px
-			top: 10px
-	.fa-exclamation-triangle:before, .fa-warning:before
-		margin-right: 5px
+			+fs(16rem)
+			line-height: 1
 .form-group
 	position: relative
 	.fa.fa-exclamation-triangle

@@ -15,6 +15,7 @@
 			img
 				max-width: 100%
 				max-height: 100%
+				+transition(all,0.3s)
 		.caption
 			@extend .fontB
 			.id
@@ -158,6 +159,8 @@
 		@extend .button
 		background: $blue
 		padding: 0px 40px
+		&:hover
+			background: darken($blue,10%)
 .product-description
 	margin-bottom: 40px
 	.nav-tabs
@@ -190,6 +193,8 @@
 					+fs(12rem)
 					text-align: center
 					padding: 10px 5px
+				&:hover
+					color: $red
 				&.active
 					background: #f5f6f9
 					color: $blue
@@ -206,6 +211,7 @@
 		border: 1px solid darken($white,10%)
 		border-right: none
 		border-bottom: none
+		background: $white
 		tr
 			border: none
 		th,td
@@ -215,6 +221,9 @@
 			border-bottom: 1px solid darken($white,10%)
 			+fs(15rem)
 			@extend .fontB
+			*
+				font-size: inherit !important
+				font-family: 'Barlow' !important
 
 .product-related
 	.pr-title
