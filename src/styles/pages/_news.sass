@@ -3,74 +3,74 @@
 	+ .pages
 		margin-top: -40px
 		margin-bottom: 60px
-	.news-list
-		.news-item
-			+flexbox
-			flex-wrap: wrap
-			margin-bottom: 30px
-			.img
-				display: block
-				width: 240px
+.news-list
+	.news-item
+		+flexbox
+		flex-wrap: wrap
+		margin-bottom: 30px
+		.img
+			display: block
+			width: 240px
+			+media-breakpoint-down(sm)
+				width: 100%
+				margin-bottom: 10px
+			img
+				width: 100%
+				height: 170px
+				object-fit: cover
 				+media-breakpoint-down(sm)
-					width: 100%
-					margin-bottom: 10px
-				img
-					width: 100%
-					height: 170px
-					object-fit: cover
-					+media-breakpoint-down(sm)
-						height: 200px
-			.caption
-				width: calc(100% - 240px)
-				padding-left: 30px
-				@extend .fontB
+					height: 200px
+		.caption
+			width: calc(100% - 240px)
+			padding-left: 30px
+			@extend .fontB
+			+media-breakpoint-down(sm)
+				width: 100%
+				padding-left: 0
+			time
+				+fs(13rem)
+				font-style: italic
+				color: $blue
 				+media-breakpoint-down(sm)
-					width: 100%
-					padding-left: 0
-				time
-					+fs(13rem)
-					font-style: italic
-					color: $blue
-					+media-breakpoint-down(sm)
-						+fs(12rem)
-				.name
-					+fs(20rem)
-					line-height: 1.3
-					font-weight: 500
-					color: $main
-					margin-bottom: 10px
-					+media-breakpoint-down(sm)
-						+fs(18rem)
-					a
-						display: block
-						+textover(2)
-				.des
+					+fs(12rem)
+			.name
+				+fs(20rem)
+				line-height: 1.2
+				font-weight: 500
+				color: $main
+				margin-bottom: 10px
+				+media-breakpoint-down(sm)
 					+fs(18rem)
-					line-height: 1.3
-					+textover(3)
-					margin-bottom: 20px
-					+media-breakpoint-down(sm)
-						+fs(14rem)
+				a
+					display: block
+					+textover(2)
+			.des
+				+fs(16rem)
+				line-height: 1.2
+				+textover(3)
+				margin-bottom: 10px
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+			.viewdetail
+				+fs(16rem)
+				font-weight: 500
+				color: $red
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+				&:after
+					content: '\e87a'
+					font-family: 'linearicons-free'
+					line-height: 1
+					font-weight: bold
+					margin-left: 10px
+					+transition(all,0.3s)
+		&:hover
+			.caption
+				.name
+					color: $blue
 				.viewdetail
-					+fs(16rem)
-					font-weight: 500
-					color: $red
-					+media-breakpoint-down(sm)
-						+fs(14rem)
-					&:after
-						content: '\e87a'
-						font-family: 'linearicons-free'
-						line-height: 1
-						font-weight: bold
-						margin-left: 10px
-						+transition(all,0.3s)
-			&:hover
-				.caption
-					.name
-						color: $blue
-					.viewdetail
-						&::after
-							margin-left: 20px
+					&::after
+						margin-left: 20px
 .news-detail
 	.news-name
 		+fs(24rem)

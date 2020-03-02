@@ -1,6 +1,6 @@
 include ../_layout/banner
 
-section.home-intro
+//- section.home-intro
 	.container
 		.row
 			.col-12.col-md-6
@@ -19,65 +19,139 @@ section.home-intro
 					a.viewmore(href="#!") Câu chuyện của chúng tôi
 
 section.home-solution
-	.bg(style="background: url(img/bg.jpg) center center / cover no-repeat")
 	.container
-		.row
-			.col-12.col-md-6.col-xl-5
-				.solution-intro
-					.intro-title Giải pháp 
-						br 
-						|tốt nhất 
-						br 
-						|cho phát triển 
-						br 
-						|bền vững
-					.content
-						p Slogan của chúng tôi phản ánh sứ mệnh: quan tâm, sáng tạo và chia sẻ các giải pháp sản xuất cho nền công nghiệp chế biến thủy sản
-					a.viewmore(href="#!") Xem thêm
+		.home-title.text-center Giải pháp theo lĩnh vực
+		.solution-list
+			.row
+				.col-12.col-md-4
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution1.jpg", alt="")
+						.caption
+							.icon
+								img(src="img/solutionic1.png", alt="")
+							.name SHRIMP
+				.col-12.col-md-4
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution1.jpg", alt="")
+						.caption
+							.icon
+								img(src="img/solutionic1.png", alt="")
+							.name SHRIMP
+				.col-12.col-md-4
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution1.jpg", alt="")
+						.caption
+							.icon
+								img(src="img/solutionic1.png", alt="")
+							.name SHRIMP
+		.home-title.text-center Giải pháp theo thiết bị
+		.solution-list2
+			.row
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
+				.col-6.col-md-4.col-lg-custom
+					a.solution-item(href="#!")
+						.img
+							img(src="img/solution21.jpg", alt="")
+						.caption
+							.name Conveyor
 
 section.home-whychoose
+	.bg(style="background: url(img/bg3.jpg) center center / cover no-repeat")
 	.container
 		.home-title.text-center Tại sao chọn chúng tôi
 		.reason-list
 			.row
 				.col-12.col-md-6.col-lg-4
-					.reason
-						.number 01
+					.reason-item
+						a.img(href="#!")
+							img(src="img/wc1.jpg", alt="")
 						.caption
-							.name Tư vấn chuyên nghiệp
-							.des Chuyên viên tư vấn giàu kinh nghiệm luôn sẵn sàng lắng nghe, tư vấn và giải đáp mọi thắc mắc của quý khách
+							.icon
+								img(src="img/wcic1.png", alt="")
+							.name
+								a(href="#!") Tư vấn chuyên nghiệp
+							.des Chuyên viên tư vấn giàu kinh nghiệm luôn sẵn sàng lắng nghe, tư vấn và giải đáp mọi thắc mắc của Quý khách...
+							a.link(href="#!") Xem chi tiết
 				.col-12.col-md-6.col-lg-4
-					.reason
-						.number 02
+					.reason-item
+						a.img(href="#!")
+							img(src="img/wc1.jpg", alt="")
 						.caption
-							.name Thiết kế phù hợp
-							.des Đội ngũ kỹ sư giỏi tạo ra những thiết kế riêng biệt dựa trên yêu cầu và sự phù hợp của từng khách hàng
+							.icon
+								img(src="img/wcic1.png", alt="")
+							.name
+								a(href="#!") Tư vấn chuyên nghiệp
+							.des Chuyên viên tư vấn giàu kinh nghiệm luôn sẵn sàng lắng nghe, tư vấn và giải đáp mọi thắc mắc của Quý khách...
+							a.link(href="#!") Xem chi tiết
 				.col-12.col-md-6.col-lg-4
-					.reason
-						.number 03
+					.reason-item
+						a.img(href="#!")
+							img(src="img/wc1.jpg", alt="")
 						.caption
-							.name Sản phẩm tối ưu
-							.des Hệ thống sản xuất linh hoạt nhằm mang lại những sản phẩm "tối ưu" nhất. Chất lượng đảm bảo, giá cả hợp lý, phù hợp nhu cầu
-				.col-12.col-md-6.col-lg-4
-					.reason
-						.number 04
-						.caption
-							.name Lắp đặt nhanh chóng
-							.des Bộ phận lắp đặt nhanh chóng, hướng dẫn sử dụng dễ hiểu giúp khách hàng dễ dàng vận hành sản phẩm
-				.col-12.col-md-6.col-lg-4
-					.reason
-						.number 05
-						.caption
-							.name Hậu mãi tận tâm
-							.des Nhân viên chăm sóc khách hàng tận tâm luôn sẵn sàng chăm sóc tức thời nhằm đảm bảo sản phẩm được hoạt động liên tục
-				.col-12.col-md-6.col-lg-4
-					.reason
-						.number 06
-						.caption
-							.name Cải tiến không ngừng
-							.des Không ngừng cập nhật và cải tiến sản phẩm nhằm tăng năng suất, giảm chi phí sản xuất cho nhà đầu tư
+							.icon
+								img(src="img/wcic1.png", alt="")
+							.name
+								a(href="#!") Tư vấn chuyên nghiệp
+							.des Chuyên viên tư vấn giàu kinh nghiệm luôn sẵn sàng lắng nghe, tư vấn và giải đáp mọi thắc mắc của Quý khách...
+							a.link(href="#!") Xem chi tiết
 
-section.home-product
+//- section.home-product
 	.container
 		.home-title.text-center Sản phẩm nổi bật
 		.product-list
@@ -156,7 +230,51 @@ section.home-product
 							a.viewdetail(href="#!") Xem chi tiết
 		.btn-wrap.text-center
 			a.viewmore(href="#!") Xem thêm
-
+section.home-news
+	.container
+		.home-title.text-center Tin tức & sự kiện
+		.news-list
+			.row
+				.col-12.col-md-6
+					.news-item
+						a.img(href="#!")
+							img(src="img/n1.jpg", alt="")
+						.caption
+							time 10:12PM - 20/06/2019
+							.name 
+								a(href="#!") DU LỊCH NHA TRANG - Gắn kết yêu thương
+							.des Nằm trong chuỗi hoạt động thường niên của Công ty TNHH Năm Dũng, nhằm mục đích tạo sân chơi riêng, phát triển thể lực và xây dựng tinh thần đồng đội trong tập thể nhân viên trong toàn công ty.
+							a.viewdetail(href="#!") Xem chi tiết
+				.col-12.col-md-6
+					.news-item
+						a.img(href="#!")
+							img(src="img/n2.jpg", alt="")
+						.caption
+							time 10:12PM - 20/06/2019
+							.name 
+								a(href="#!") DU LỊCH NHA TRANG - Gắn kết yêu thương
+							.des Nằm trong chuỗi hoạt động thường niên của Công ty TNHH Năm Dũng, nhằm mục đích tạo sân chơi riêng, phát triển thể lực và xây dựng tinh thần đồng đội trong tập thể nhân viên trong toàn công ty.
+							a.viewdetail(href="#!") Xem chi tiết
+				.col-12.col-md-6
+					.news-item
+						a.img(href="#!")
+							img(src="img/n3.jpg", alt="")
+						.caption
+							time 10:12PM - 20/06/2019
+							.name 
+								a(href="#!") DU LỊCH NHA TRANG - Gắn kết yêu thương
+							.des Nằm trong chuỗi hoạt động thường niên của Công ty TNHH Năm Dũng, nhằm mục đích tạo sân chơi riêng, phát triển thể lực và xây dựng tinh thần đồng đội trong tập thể nhân viên trong toàn công ty.
+							a.viewdetail(href="#!") Xem chi tiết
+				.col-12.col-md-6
+					.news-item
+						a.img(href="#!")
+							img(src="img/n4.jpg", alt="")
+						.caption
+							time 10:12PM - 20/06/2019
+							.name 
+								a(href="#!") DU LỊCH NHA TRANG - Gắn kết yêu thương
+							.des Nằm trong chuỗi hoạt động thường niên của Công ty TNHH Năm Dũng, nhằm mục đích tạo sân chơi riêng, phát triển thể lực và xây dựng tinh thần đồng đội trong tập thể nhân viên trong toàn công ty.
+							a.viewdetail(href="#!") Xem chi tiết
 section.home-partner
 	.container
 		.home-title.text-center Đối tác của chúng tôi
@@ -183,7 +301,7 @@ section.home-partner
 				a.partner-logo(href="#!")
 					img(src="img/pn1.png", alt="partner" title="partner")
 
-section.home-service
+//- section.home-service
 	.container
 		.service-list
 			.row

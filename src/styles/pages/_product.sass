@@ -118,6 +118,9 @@
 			padding: 0px 5px
 	.slick-slide
 		padding: 0px 5px
+		&.slick-current
+			.img
+				border-color: $blue
 	.img
 		+flexbox
 		align-items: center
@@ -125,6 +128,7 @@
 		justify-content: center
 		height: 70px
 		border: 1px solid darken($white,10%)
+		cursor: pointer
 		+media-breakpoint-down(sm)
 			height: 50px
 		img

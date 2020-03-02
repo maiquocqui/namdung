@@ -62,7 +62,8 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     dots: false,
-    asNavFor: '.product-slide'
+    asNavFor: '.product-slide',
+    focusOnSelect: true
   });
 
   $('.related-slide').slick({
@@ -87,6 +88,10 @@ $(document).ready(function () {
       }
     }]
   });
+
+  if ($(window).width() < 1200) {
+    $('.language').insertAfter($('.search'));
+  }
 });
 
 $(window).scroll(function () {

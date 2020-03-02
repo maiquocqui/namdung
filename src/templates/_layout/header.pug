@@ -7,6 +7,13 @@ header
 					.phone
 						|Hotline - 
 						a(href="tel:0949 362 408") 0949 362 408
+					.language
+						.dropdown
+							.btn.dropdown-toggle#dropdownMenuButton(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false').
+								Vietnamese
+							.dropdown-menu(aria-labelledby='dropdownMenuButton')
+								a.dropdown-item.active(href='#') Vietnamese
+								a.dropdown-item(href='#') English
 	.header-menu
 		.container
 			.header-wrap
@@ -26,8 +33,16 @@ header
 											a(href="#!") Về công ty
 										li
 											a(href="#!") Tầm nhìn sứ mệnh
-										li
+										li.has-sub2
 											a(href="#!") Khách hàng
+											.sub2
+												ul
+													li
+														a(href="#!") Danh sách khách hàng 1
+													li
+														a(href="#!") Danh sách khách hàng 2
+													li
+														a(href="#!") Danh sách khách hàng 3
 							li 
 								a(href="#!") Sản phẩm
 							li 
