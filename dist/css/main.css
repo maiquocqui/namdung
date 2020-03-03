@@ -10206,7 +10206,7 @@ footer .footer-bottom {
       margin-left: 20px; }
 
 .sidebar-title {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 500;
   padding-bottom: 10px;
   position: relative; }
@@ -10537,6 +10537,42 @@ footer .footer-bottom {
     .history-wrap .fa-home {
       margin-left: 30px; } }
 
+.tn-section {
+  margin-bottom: 30px; }
+
+.sm-section .sm-list .sm-item {
+  margin-bottom: 30px; }
+  .sm-section .sm-list .sm-item .sm-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center; }
+    .sm-section .sm-list .sm-item .sm-title .icon {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      font-size: 1.125rem;
+      font-weight: normal;
+      border-radius: 100px;
+      background: #0c77b6;
+      color: #fff;
+      margin-right: 10px; }
+    .sm-section .sm-list .sm-item .sm-title .text {
+      font-size: 1.125rem;
+      font-weight: 600; }
+  .sm-section .sm-list .sm-item .des {
+    margin-left: 50px; }
+
 .product-list .product {
   margin-bottom: 40px; }
   @media (max-width: 767.98px) {
@@ -10566,9 +10602,12 @@ footer .footer-bottom {
       -o-transition: all, 0.3s;
       transition: all, 0.3s; }
   .product-list .product .caption .id {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #666666;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
     @media (max-width: 767.98px) {
       .product-list .product .caption .id {
         font-size: 0.75rem; } }
@@ -10596,7 +10635,8 @@ footer .footer-bottom {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    display: none; }
     @media (max-width: 991.98px) {
       .product-list .product .caption .des {
         font-size: 0.875rem; } }
@@ -10605,7 +10645,8 @@ footer .footer-bottom {
         font-size: 0.8125rem; } }
   .product-list .product .caption .viewdetail {
     font-size: 1rem;
-    color: #ee4045; }
+    color: #ee4045;
+    display: none; }
     @media (max-width: 991.98px) {
       .product-list .product .caption .viewdetail {
         font-size: 0.8125rem; } }
