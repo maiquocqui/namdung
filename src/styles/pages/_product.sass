@@ -70,6 +70,12 @@
 				.viewdetail
 					&::after
 						margin-left: 20px
+	// &.big
+	.product
+		.img
+			height: 220px
+			+media-breakpoint-down(sm)
+				height: 120px
 
 .product-page
 	@extend .content-page
@@ -79,6 +85,7 @@
 		margin-top: -40px
 		margin-bottom: 60px
 .product-slide
+	margin-bottom: 20px
 	.item
 		a
 			+flexbox
@@ -94,8 +101,14 @@
 				display: initial
 				max-width: 100%
 				max-height: 100%
+	// &.big
+	.item
+		a
+			+media-breakpoint-up(lg)
+				height: 450px
+
 .product-nav
-	margin: 0px 10px 40px
+	margin: 0px -10px 40px
 	+media-breakpoint-down(sm)
 		margin-bottom: 20px
 	.slick-prev, .slick-next
@@ -139,6 +152,10 @@
 		img
 			max-width: 90%
 			max-height: 90%
+	// &.big
+	.img
+		+media-breakpoint-up(lg)
+			height: 100px
 .product-info
 	@extend .fontB
 	margin-bottom: 40px
@@ -216,23 +233,24 @@
 			+fs(16rem)
 			+media-breakpoint-down(sm)
 				+fs(14rem)
-	table
-		border: 1px solid darken($white,10%)
-		border-right: none
-		border-bottom: none
-		background: $white
-		tr
-			border: none
-		th,td
-			padding: 10px
-			border: none
-			border-right: 1px solid darken($white,10%)
-			border-bottom: 1px solid darken($white,10%)
-			+fs(15rem)
-			@extend .fontB
-			*
-				font-size: inherit !important
-				font-family: 'Barlow' !important
+			table
+				border: 1px solid darken($white,10%)
+				border-right: none
+				border-bottom: none
+				background: $white
+				tr
+					border: none
+				th,td
+					padding: 10px
+					border: none
+					border-right: 1px solid darken($white,10%)
+					border-bottom: 1px solid darken($white,10%)
+					+fs(15rem)
+					@extend .fontB
+					*
+						font-size: inherit !important
+						font-family: 'Barlow' !important
+						margin: 0
 
 .product-related
 	.pr-title
@@ -268,3 +286,29 @@
 				padding: 0px 5px
 		.slick-slide
 			padding: 0px 5px
+
+.sidebar.product-sidebar
+	+media-breakpoint-up(lg)
+		margin-top: 0
+		padding: 0
+		.sidebar-title
+			display: none
+		ul
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			justify-content: center
+			background: none
+			padding: 5px 15px
+			max-width: 1170px
+			width: 100%
+			margin: 0 auto
+			li
+				margin-bottom: 0
+				padding: 0 10px
+				border: none
+				a
+					padding: 8px 10px
+	+media-breakpoint-down(md)
+		margin: 15px 15px

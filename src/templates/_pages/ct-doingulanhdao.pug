@@ -1,0 +1,98 @@
+section.breadcrumb-wrap.clearfix
+	.breadcrumb-bg(style="background: url(img/br.jpg) center center no-repeat;background-size:cover")
+	h3.page-name Giới thiệu
+	ol.breadcrumb
+		li
+			a(href="#!") Trang chủ
+		li
+			a(href="#!") Giới thiệu
+		li
+			a(href="#!") Đội ngũ lãnh đạo
+.container
+	.row
+		.col-12.col-lg-3
+			nav.sidebar
+				.sidebar-title Giới thiệu
+				ul
+					li
+						a(href="#!") Về công ty Năm Dũng
+					li
+						a(href="#!") Tầm nhìn sứ mệnh
+					li.active
+						a(href="#!") Đội ngũ lãnh đạo
+					li
+						a(href="#!") Khách hàng
+					li
+						a(href="#!") Nhận xét của khách hàng
+		.col-12.col-lg-9
+			.about-page
+				.staff-list
+					.row
+						.col-12.col-md-4
+							.staff-item(data-toggle="modal" data-target="#staffModal")
+								.img
+									img(src="img/avt.jpg", alt="alt")
+								.caption
+									.name Ông 
+										strong Nguyễn Văn A
+									.vt Chủ tịch HĐQT kiêm Giám đốc
+						.col-12.col-md-4
+							.staff-item(data-toggle="modal" data-target="#staffModal")
+								.img
+									img(src="img/avt.jpg", alt="alt")
+								.caption
+									.name Ông 
+										strong Nguyễn Văn A
+									.vt Trưởng chi nhánh TP.HCM
+						.col-12.col-md-4
+							.staff-item(data-toggle="modal" data-target="#staffModal")
+								.img
+									img(src="img/avt.jpg", alt="alt")
+								.caption
+									.name Ông 
+										strong Nguyễn Văn A
+									.vt Phó giám đốc kinh doanh
+						.col-12.col-md-4
+							.staff-item(data-toggle="modal" data-target="#staffModal")
+								.img
+									img(src="img/avt.jpg", alt="alt")
+								.caption
+									.name Bà
+										strong Nguyễn Văn A
+									.vt Phó giám đốc thường trực
+						.col-12.col-md-4
+							.staff-item(data-toggle="modal" data-target="#staffModal")
+								.img
+									img(src="img/avt.jpg", alt="alt")
+								.caption
+									.name Ông 
+										strong Nguyễn Văn A
+									.vt Phó giám đốc
+						.col-12.col-md-4
+							.staff-item(data-toggle="modal" data-target="#staffModal")
+								.img
+									img(src="img/avt.jpg", alt="alt")
+								.caption
+									.name Ông 
+										strong Nguyễn Văn A
+									.vt Đội trưởng HACCP
+
+.modal.fade#staffModal(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+	.modal-dialog.modal-lg(role='document')
+		.modal-content
+			.modal-header
+				h5.modal-title#exampleModalLabel Ông 
+					strong Nguyễn Văn A
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') ×
+			.modal-body
+				.row
+					.col-12.col-md-4
+						.staff-img
+							img(src="img/cuvanthanh.jpg", alt="alt")
+					.col-12.col-md-8
+						.content 
+							p Bén duyên với cây dừa từ những năm 1980, đến năm 1984 ông Thành giữ vai trò là Trưởng phòng kế hoạch Trung tâm dừa Đồng Gò.
+							p 14 năm gắn bó cùng ngành, với lòng đam mê, nhiệt huyết, ông Thành thành lập Doanh nghiệp tư nhân ép dầu Lương Quới năm 1997, đăt nền móng đầu tiên cho công ty TNHH Chế Biến Dừa Lương Quới.
+							p Với khát vọng nâng cao giá trị trái dừa cũng như ngành dừa và tạo đầu ra cho người nông dân trồng dừa tỉnh Bến Tre, ông Thành không ngừng nghiên cứu, cải tiến công nghệ, phát triển sản phẩm mới phù hợp với nhu cầu nội địa và xuất khẩu, đưa Công ty TNHH Chế Biến Dừa Lương Quới vươn tầm trở thành một trong những công ty chế biến dừa hàng đầu Việt Nam.
+
