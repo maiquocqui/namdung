@@ -9158,7 +9158,7 @@ header {
           background: #fff;
           box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
           padding: 10px 15px;
-          min-width: 260px;
+          min-width: 280px;
           visibility: hidden;
           opacity: 0; }
           header .menu ul.menu-link > li .sub > ul > li {
@@ -9207,7 +9207,7 @@ header {
                 background: #fff;
                 box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
                 padding: 0px 15px;
-                min-width: 260px;
+                min-width: 280px;
                 position: absolute;
                 top: 0;
                 left: 100%;
