@@ -98,6 +98,8 @@ $(document).ready(function () {
   if ($(window).width() < 1200) {
     $('.language').insertAfter($('.search'))
   }
+
+  $('.last .solution-item').height($('.last .solution-item').width())
 });
 
 $(window).scroll(function () {
