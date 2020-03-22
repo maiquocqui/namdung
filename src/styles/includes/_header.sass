@@ -125,14 +125,15 @@ header
 		align-items: center
 		align-content: center
 		+media-breakpoint-down(lg)
-			+pos(fix, 50px null null 0)
-			display: block
+			+pos(fix, 50px 0 0 0)
+			display: none
 			background: $blue
 			padding: 15px
-			+transform(translateX(-100%))
-			+transition(all,0.5s)
-			&.open
-				+transform(translateX(0%))
+			overflow: auto
+			// +transform(translateX(-100%))
+			+transition(all,0s)
+			// &.open
+			// 	+transform(translateX(0%))
 	.menu
 		margin-right: 30px
 		+media-breakpoint-down(lg)
@@ -177,6 +178,7 @@ header
 						display: none
 					+media-breakpoint-down(lg)
 						color: $white
+						padding: 10px 25px
 				&:first-child
 					+media-breakpoint-up(xl)
 						a
@@ -185,6 +187,24 @@ header
 								content: '\f015'
 								+fs(18rem)
 								font-weight: normal
+				&.has-sub
+					+pos(rel,null)
+					.btn-showsub
+						display: none
+						+pos(abs, 8px 0 null null)
+						z-index: 5
+						color: $white
+						+fs(24rem)
+						width: 30px
+						text-align: center
+						line-height: 1
+						&:before
+							content: '+'
+						&.open
+							&:before
+								content: '-'
+						+media-breakpoint-down(lg)
+							display: block
 				.sub
 					display: block
 					+pos(abs, 100% null null 15px)
@@ -194,16 +214,33 @@ header
 					min-width: 280px
 					visibility: hidden
 					opacity: 0
+					+media-breakpoint-down(lg)
+						+pos(static,null)
+						visibility: visible
+						opacity: 1
+						display: none
+						width: 100%
+						min-width: unset
+						background: rgba($black,0.1)
+						padding: 0
+						box-shadow: none
 					> ul
 						> li
 							padding: 2px 0
+							+media-breakpoint-down(lg)
+								padding: 0
 							+ li
 								border-top: 1px solid color-rgba($black,0.1)
+								+media-breakpoint-down(lg)
+									border-top: none
 							> a
 								display: block
 								+fs(15rem)
 								font-weight: 500
 								padding: 10px 0
+								+media-breakpoint-down(lg)
+									padding: 10px 25px
+									color: $white
 								&:before
 									content: '\f061'
 									display: inline-block
@@ -236,6 +273,13 @@ header
 									// +transform(translateX(15px))
 									visibility: hidden
 									opacity: 0
+									+media-breakpoint-down(lg)
+										+pos(static,null)
+										visibility: visible
+										opacity: 1
+										display: none
+										width: 100%
+										min-width: unset
 									> ul
 										> li
 											padding: 2px 0
@@ -267,9 +311,10 @@ header
 														opacity: 1
 														visibility: visible
 								&:hover
-									.sub2
-										visibility: visible
-										opacity: 1
+									+media-breakpoint-up(xl)
+										.sub2
+											visibility: visible
+											opacity: 1
 				&:hover
 					> a
 						color: $red

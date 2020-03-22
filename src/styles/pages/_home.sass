@@ -332,3 +332,78 @@
 					.viewdetail
 						&:after 
 							margin-left: 20px
+
+// UPDATE ADD HOME FEATURE
+.home-feature
+	@extend .home-section
+	.reason-list
+		background: url(../img/bg2.jpg) center center no-repeat
+		.col-12
+			+media-breakpoint-up(lg)
+				&:nth-child(2),&:nth-child(5)
+					.reason
+						margin-top: 20px
+						flex-direction: column-reverse
+						+pos(rel,null)
+						&:before
+							content: ''
+							display: block
+							width: 102px
+							height: 121px
+							background: url(../img/rline.png) center center no-repeat
+							+pos(abs, 50% null null -50px)
+							+transform(translateY(-50%))
+						&:after
+							content: ''
+							display: block
+							width: 102px
+							height: 121px
+							background: url(../img/rline.png) center center no-repeat
+							+pos(abs, 50% -50px null null)
+							+transform(translateY(-50%)scale(-1,1))
+		.reason
+			+flexbox
+			flex-direction: column
+			align-items: center
+			align-content: center
+			margin-bottom: 40px
+			+media-breakpoint-down(sm)
+				margin-bottom: 20px
+			.number
+				@extend .fontB
+				+fs(110rem)
+				line-height: 1
+				font-weight: 800
+				color: #e9f0f2
+				+pos(rel,null)
+				+transition(all,0.3s)
+				&:before
+					content: ''
+					display: block
+					width: 20px
+					height: 20px
+					+bor-rad(100px)
+					background: $red
+					border: 5px solid $white
+					+pos(abs, 50% null null 50%)
+					+transform(translate(-50%,-50%))
+			.caption
+				text-align: center
+				.name
+					@extend .fontB
+					+fs(22rem)
+					color: #22abc3
+					font-weight: 700
+					text-transform: uppercase
+					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(18rem)
+				.des
+					+fs(16rem)
+					max-width: 300px
+					margin: 0 auto
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+			&:hover
+				.number
+					color: darken($blue,10%)
