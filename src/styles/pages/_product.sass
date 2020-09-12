@@ -316,3 +316,16 @@
 body.maplink
 	.pages
 		display: none !important
+
+.images-map
+	+pos(rel,null)
+
+.maps-tooltip
+	background: color-rgba($black,0.8)
+	color: $white
+	+fs(15rem)
+	text-align: center
+	padding: 7px 20px
+	+bor-rad(5px)
+	z-index: 100
+	+pos(abs, null)

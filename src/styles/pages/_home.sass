@@ -407,3 +407,43 @@
 			&:hover
 				.number
 					color: darken($blue,10%)
+
+@keyframes gradientAnimation
+	0%
+		left: -20%
+	// 	opacity: 0
+	// 10%
+	// 	opacity: 1
+	// 50%
+	// 	opacity: 1
+	// 90%
+	// 	opacity: 1
+	100%
+		left: 120%
+		// opacity: 0
+
+.loading
+	background: $white
+	+flexbox
+	align-items: center
+	align-content: center
+	justify-content: center
+	+pos(fix, 0px 0px 0px 0px)
+	z-index: 999999999
+	.logo
+		+pos(rel,null)
+		&::before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			background: linear-gradient(to right,color-rgba($white,0),color-rgba($white,0.8),color-rgba($white,0))
+			+pos(abs, 0 null null 0)
+			z-index: 10
+			+transform(translateX(-50%))
+			animation: gradientAnimation 1s infinite
+
+
+	img
+		filter: grayscale(100%)
+		opacity: 0.6
