@@ -317,8 +317,34 @@ body.maplink
 	.pages
 		display: none !important
 
+@keyframes mouseMove
+	0%
+		left: calc(50% - 100px)
+		opacity: 0
+	20%
+		opacity: 1
+	80%
+		opacity: 1
+	100%
+		left: calc(50% + 100px)
+		opacity: 0
+
 .images-map
 	+pos(rel,null)
+	&::before
+		content: ''
+		display: block
+		width: 40px
+		height: 40px
+		background: url(../img/cursor.png) center center no-repeat
+		background-size: 100% auto
+		+pos(abs, 50% null null 0)
+		+transform(translateX(-50%))
+		animation: mouseMove 2s ease-in-out infinite
+		z-index: 10
+	&.no-guide
+		&::before
+			display: none !important
 
 .maps-tooltip
 	background: color-rgba($black,0.8)

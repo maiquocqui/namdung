@@ -10372,7 +10372,8 @@ footer .footer-bottom {
   left: 0px;
   z-index: 999999999; }
   .loading .logo {
-    position: relative; }
+    position: relative;
+    max-width: 500px; }
     .loading .logo::before {
       content: '';
       display: block;
@@ -10389,7 +10390,7 @@ footer .footer-bottom {
       -ms-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%);
-      animation: gradientAnimation 1s infinite; }
+      animation: gradientAnimation 3s ease-in-out infinite; }
   .loading img {
     filter: grayscale(100%);
     opacity: 0.6; }
@@ -11166,8 +11167,40 @@ footer .footer-bottom {
 body.maplink .pages {
   display: none !important; }
 
+@keyframes mouseMove {
+  0% {
+    left: calc(50% - 100px);
+    opacity: 0; }
+  20% {
+    opacity: 1; }
+  80% {
+    opacity: 1; }
+  100% {
+    left: calc(50% + 100px);
+    opacity: 0; } }
+
 .images-map {
   position: relative; }
+  .images-map::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/cursor.png) center center no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateX(-50%);
+    -khtml-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    animation: mouseMove 2s ease-in-out infinite;
+    z-index: 10; }
+  .images-map.no-guide::before {
+    display: none !important; }
 
 .maps-tooltip {
   background: rgba(0, 0, 0, 0.8);

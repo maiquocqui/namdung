@@ -432,6 +432,7 @@
 	z-index: 999999999
 	.logo
 		+pos(rel,null)
+		max-width: 500px
 		&::before
 			content: ''
 			display: block
@@ -441,7 +442,7 @@
 			+pos(abs, 0 null null 0)
 			z-index: 10
 			+transform(translateX(-50%))
-			animation: gradientAnimation 1s infinite
+			animation: gradientAnimation 3s ease-in-out infinite
 
 
 	img
